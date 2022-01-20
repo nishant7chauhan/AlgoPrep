@@ -1,7 +1,7 @@
 package array;
 
 /**
- * Max sum contiguous sub-array
+ * Max sum contiguous sub-array   can check geeksfor geeks video for all -ve numbers solution
  * @author nishant.chauhan
  * O(n)
  */
@@ -28,16 +28,18 @@ public class Kadane {
 			
 			max_ending_here += a[i];
 			
-			if(max_so_far < max_ending_here) {
+			if(max_ending_here < 0) {
+				max_ending_here = 0;
+				s = i + 1;
+			}
+			
+			else if(max_so_far < max_ending_here) {
 				max_so_far = max_ending_here;
 				start = s;
 				end = i;
 			}
 			
-			if(max_ending_here < 0) {
-				max_ending_here = 0;
-				s = i + 1;
-			}
+			
 		}
 		
 		System.out.print("Sum: " + max_so_far + "\n" + "Start Index: "+ start + "\n" + "End Index: "+end);

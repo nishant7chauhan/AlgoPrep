@@ -1,10 +1,10 @@
-package array;
+package dp;
 
 /**
  * Egg drop problem
  * @author nishantchauhan
- * Time Complexity: O(n*k^2).Where ‘n’ is the number of eggs and ‘k’ is the number of floors, as we use a nested for loop ‘k^2’ times for each egg
- * Auxiliary Space: O(n*k).As a 2-D array of size ‘n*k’ is used for storing elements.
+ * Time Complexity: O(n*k^2).Where ï¿½nï¿½ is the number of eggs and ï¿½kï¿½ is the number of floors, as we use a nested for loop ï¿½k^2ï¿½ times for each egg
+ * Auxiliary Space: O(n*k).As a 2-D array of size ï¿½n*kï¿½ is used for storing elements.
  *
  */
 
@@ -18,13 +18,13 @@ public class EggDrop {
 		case with n eggs and k floors */
 		static int eggDrop(int n, int k) 
 		{ 
-		/* A 2D table where entery eggFloor[i][j] will represent minimum 
+		/* A 2D table where entry eggFloor[i][j] will represent minimum 
 		number of trials needed for i eggs and j floors. */
 			int eggFloor[][] = new int[n+1][k+1]; 
 			int res; 
 			int i, j, x; 
 			
-			// We need one trial for one floor and0 trials for 0 floors 
+			// We need one trial for one floor and 0 trials for 0 floors 
 			for (i = 1; i <= n; i++) 
 			{ 
 				eggFloor[i][1] = 1; 

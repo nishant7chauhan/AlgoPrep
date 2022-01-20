@@ -1,16 +1,14 @@
 package array;
 
-
 /**
  * Find median of two sorted arrays of same size ( log n solution expected)
- * @author nishantchauhan
- * log n
+ * 
+ * @author nishantchauhan log n
  */
-
 
 public class MedianOfTwoSortedArray {
 
-	static int getMedian(int[] a, int[] b, int startA, int startB, int endA, int endB) {
+	static int getMedian(int[] a, int[] b, int startA, int endA, int startB, int endB) {
 		if (endA - startA == 1) {
 			return (Math.max(a[startA], b[startB]) + Math.min(a[endA], b[endB])) / 2;
 		}
@@ -35,14 +33,14 @@ public class MedianOfTwoSortedArray {
 		 * if m1 < m2 then median must exist in ar1[m1....] and ar2[....m2]
 		 */
 		else if (m1 < m2) {
-			return getMedian(a, b, (endA + startA + 1) / 2, startB, endA, (endB + startB + 1) / 2);
+			return getMedian(a, b, (endA + startA + 1) / 2, endA, startB, (endB + startB + 1) / 2);
 		}
 
 		/*
 		 * if m1 > m2 then median must exist in ar1[....m1] and ar2[m2...]
 		 */
 		else {
-			return getMedian(a, b, startA, (endB + startB + 1) / 2, (endA + startA + 1) / 2, endB);
+			return getMedian(a, b, startA, (endA + startA + 1) / 2, (endB + startB + 1) / 2, endB);
 		}
 	}
 
@@ -71,7 +69,7 @@ public class MedianOfTwoSortedArray {
 		} else if (n1 == 1) {
 			System.out.println((ar1[0] + ar2[0]) / 2);
 		} else {
-			System.out.println("Median is " + getMedian(ar1, ar2, 0, 0, ar1.length - 1, ar2.length - 1));
+			System.out.println("Median is " + getMedian(ar1, ar2, 0, ar1.length - 1, 0, ar2.length - 1));
 		}
 	}
 

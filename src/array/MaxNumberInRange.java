@@ -2,10 +2,13 @@ package array;
 
 /**
  * Given a set of integer pairs as below, find the range/s where the count is
- * maximum.
+ * maximum. Given n ranges of the form L and R, the task is to find the maximum
+ * occurred integer in all the ranges. If more than one such integer exists,
+ * print the smallest one.
+ * 
  * @author nishantchauhan
  *
- * O(n + MAX)
+ *         O(n + MAX)
  */
 
 public class MaxNumberInRange {
@@ -39,8 +42,8 @@ public class MaxNumberInRange {
 				ind = i;
 			}
 		}
-		
-		System.out.print("maximum freq: "+ msum + " index: " + ind + "\n");
+
+		System.out.print("maximum freq: " + msum + " index: " + ind + "\n");
 
 		return ind;
 	}

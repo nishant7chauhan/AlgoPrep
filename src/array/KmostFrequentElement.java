@@ -64,7 +64,7 @@ public class KmostFrequentElement {
 	}
 
 	public static void main(String[] args) {
-		int[] arr = { 1, 4, 4, 4, 5, 1 };
+		int[] arr = { 1, 4, 4, 4, 5, 1 , 1};
 		kMostFrequent(arr, 2);
 	}
 

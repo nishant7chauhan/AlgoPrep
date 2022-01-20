@@ -44,7 +44,7 @@ public class FindPivotInSortedRotatedArray {
 
 	public static void main(String[] args) {
 
-		int array[] = { 5, 3, 4 };
+		int array[] = { 6, 3, 4, 5 };
 		findPivotBinarySearchTest(array);
 	}
 

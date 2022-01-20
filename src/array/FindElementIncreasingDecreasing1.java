@@ -72,7 +72,7 @@ public class FindElementIncreasingDecreasing1 {
 			if (arr[mid] > arr[mid - 1] && arr[mid] > arr[mid + 1])
 				return mid; // return mid+1 for actual pivot , this is for max element
 
-			if (arr[mid] < arr[mid - 1] && arr[mid] > arr[mid + 1])
+			if (arr[mid] < arr[mid - 1] && arr[mid] > arr[mid + 1])  //negative number case
 				r = mid - 1;
 			else
 				l = mid + 1;

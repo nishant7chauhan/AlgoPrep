@@ -1,7 +1,7 @@
 package array;
 
 /**
- * Find max diff between two array element a[j]-a[i]; j>i
+ * Find max diff between two array element a[j] - a[i]; j>i
  * 
  * @author nishantchauhan O(n)
  */

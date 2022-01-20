@@ -15,6 +15,7 @@ public class MaxConsecutiveOnesFlippingOne0 { // sliding window approach
 		int zeroCount = 0;
 		int start_index = 0;
 		int end_index = 0;
+		int zero_index = 0;
 		// Move end pointer/index
 		for (int end = 0; end < arr.length; end++) {
 			// If zero is found, then increment zeroCount
@@ -39,7 +40,14 @@ public class MaxConsecutiveOnesFlippingOne0 { // sliding window approach
 			}
 
 		}
-		System.out.println("maxConsecutiveOne: "+ maxConsecutiveOne + " start_index: " + start_index +" end_index: " +end_index);
+
+		for (int i = start_index + 1; i < arr.length; i++) {
+			if (arr[i] == 0)
+				zero_index = i;
+		}
+
+		System.out.println("maxConsecutiveOne: " + maxConsecutiveOne + " start_index: " + start_index + " end_index: "
+				+ end_index + " zero_index: "+ zero_index);
 	}
 
 	public static void main(String[] args) {

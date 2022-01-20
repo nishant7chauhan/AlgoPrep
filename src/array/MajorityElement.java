@@ -16,7 +16,9 @@ public class MajorityElement {
 	    { 
 	        /* Find the candidate for Majority*/
 	        int cand = findCandidate(a, size); 
-	  
+	        
+	        //System.out.print("candidate: "+ cand + "\n");
+	        
 	        /* Print the candidate if it is Majority*/
 	        if (isMajority(a, size, cand)) 
 	            System.out.println(" " + cand + " "); 

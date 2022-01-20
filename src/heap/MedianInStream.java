@@ -1,4 +1,4 @@
-package array;
+package heap;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -54,7 +54,7 @@ public class MedianInStream {
 			@Override
 			public int compare(Integer o1, Integer o2) {
 				// TODO Auto-generated method stub
-				return -1 * o1.compareTo(o2);
+				return o2.compareTo(o1);
 			}
 		});
 

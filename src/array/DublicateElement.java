@@ -20,7 +20,7 @@ public class DublicateElement {
 		}
 		
 		for (int i = 0; i < numRay.length; i++) System.out.print(numRay[i]+" ");
-		System.out.println("The repeating elements are : ");
+		System.out.println(" \nThe repeating elements are : ");
 		for (int i = 0; i < numRay.length; i++) {
 			if (numRay[i] >= numRay.length * 2) {
 				System.out.println(i + " ");

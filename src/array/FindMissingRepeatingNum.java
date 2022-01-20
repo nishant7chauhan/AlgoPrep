@@ -1,7 +1,7 @@
 package array;
 
 /**
- * Find missing and dublicate element
+ * Find missing and duplicate element
  * @author nishantchauhan
  * O(n)
  */

@@ -15,7 +15,7 @@ public class MatrixMultiplicationCost {
 		int q = 0;
 		for (int l = 2; l < arr.length; l++) {
 			for (int i = 0; i < arr.length - l; i++) {
-				int j = i + l; // not -1 because 4,2,3 makes length of 2
+				int j = i + l; // not -1 because 4,2,3 makes length of 2(4x2,2x3)
 				temp[i][j] = Integer.MAX_VALUE;
 				for (int k = i + 1; k < j; k++) { // k =i+1 because array index 0,1 represent 1 matrix
 					q = temp[i][k] + temp[k][j] + arr[i] * arr[k] * arr[j];

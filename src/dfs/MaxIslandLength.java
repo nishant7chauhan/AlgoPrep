@@ -1,4 +1,4 @@
-package array;
+package dfs;
 
 //Length of largest region in a matrix
 //O(row*col)

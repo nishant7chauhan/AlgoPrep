@@ -9,9 +9,6 @@ package array;
  *
  */
 
-
-
-
 public class ArrayType {
 
 	// Function to check the type of the array

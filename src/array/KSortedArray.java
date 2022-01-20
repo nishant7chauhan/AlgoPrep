@@ -26,16 +26,14 @@ public class KSortedArray {
 
 		int index = 0;
 		for (int i = k + 1; i < n; i++) {
-			arr[index++] = priorityQueue.peek();
-			priorityQueue.poll();
+			arr[index++] = priorityQueue.poll();
 			priorityQueue.add(arr[i]);
 		}
 
 		Iterator<Integer> itr = priorityQueue.iterator();
 
 		while (itr.hasNext()) {
-			arr[index++] = priorityQueue.peek();
-			priorityQueue.poll();
+			arr[index++] = priorityQueue.poll();
 		}
 
 	}
