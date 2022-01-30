@@ -2,10 +2,9 @@ package tree;
 
 /**
  * LCA of Binary search tree
- * @author nishantchauhan
- * O(n)
+ * 
+ * @author nishantchauhan O(h)
  */
-
 
 public class LCABinartSearchTree {
 
@@ -14,17 +13,13 @@ public class LCABinartSearchTree {
 			return null;
 		}
 
-		while (node != null) {
-			if (node.data > n1 && node.data > n2) {
-				node = node.left;
-			} else if (node.data < n1 && node.data < n2) {
-				node = node.right;
-			} else {
-				break;
-			}
+		if (node.data > n1 && node.data > n2) {
+			return findLCA(node.left, n1, n2);
+		} else if (node.data < n1 && node.data < n2) {
+			return findLCA(node.right, n1, n2);
+		} else {
+			return node;
 		}
-
-		return node;
 	}
 
 	public Node insert(Node node, int val) {
@@ -53,7 +48,7 @@ public class LCABinartSearchTree {
 		root = a.insert(root, 13);
 		root = a.insert(root, 20);
 
-		Node lca = a.findLCA(root, 2, 15);
+		Node lca = a.findLCA(root, 6, 7);
 
 		if (lca != null) {
 			System.out.println(lca.data);

@@ -2,11 +2,9 @@ package tree;
 
 /**
  * Print nodes at k distance from root[6]
- * @author nishant.chauhan
- * O(n)
+ * 
+ * @author nishant.chauhan O(n)
  */
-
-
 
 public class NodeKDistanceFromRoot {
 
@@ -20,10 +18,9 @@ public class NodeKDistanceFromRoot {
 		if (k == 0) {
 			System.out.print(root.data + " ");
 			return;
-		} else {
-			printKdistance(root.left, k-1);
-			printKdistance(root.right, k-1);
 		}
+		printKdistance(root.left, k - 1);
+		printKdistance(root.right, k - 1);
 
 	}
 

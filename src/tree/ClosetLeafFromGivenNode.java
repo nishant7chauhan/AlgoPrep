@@ -9,18 +9,14 @@ package tree;
  *
  */
 
-
-class Distance {
-	int minDis = Integer.MAX_VALUE;
-}
-
 public class ClosetLeafFromGivenNode {
-
+	
 	Node root;
+	int minDist = Integer.MAX_VALUE;
 
 	// This function finds closest leaf to root. This distance
 	// is stored at *minDist.
-	void findLeafDown(Node root, int lev, Distance minDist) {
+	void findLeafDown(Node root, int lev) {
 
 		// base case
 		if (root == null)
@@ -29,26 +25,28 @@ public class ClosetLeafFromGivenNode {
 		// If this is a leaf node, then check if it is closer
 		// than the closest so far
 		if (root.left == null && root.right == null) {
-			if (lev < (minDist.minDis))
-				minDist.minDis = lev;
+			if (lev < minDist)
+				minDist = lev;
 
 			return;
 		}
 
 		// Recur for left and right subtrees
-		findLeafDown(root.left, lev + 1, minDist);
-		findLeafDown(root.right, lev + 1, minDist);
+		findLeafDown(root.left, lev + 1);
+		findLeafDown(root.right, lev + 1);
 	}
 
 	// This function finds if there is closer leaf to x through
 	// parent node.
-	int findThroughParent(Node root, Node x, Distance minDist) {
+	int findThroughParent(Node root, Node x, int minDist) {
 		// Base cases
 		if (root == null)
 			return -1;
 
-		if (root == x)
+		if (root == x) {
+			findLeafDown(x, 0);
 			return 0;
+		}
 
 		// Search x in left subtree of root
 		int l = findThroughParent(root.left, x, minDist);
@@ -56,7 +54,7 @@ public class ClosetLeafFromGivenNode {
 		// If left subtree has x
 		if (l != -1) {
 			// Find closest leaf in right subtree
-			findLeafDown(root.right, l + 2, minDist);   //check coding simplified video for k distance
+			findLeafDown(root.right, l + 2);   //check coding simplified video for k distance
 			return l + 1;
 		}
 
@@ -66,7 +64,7 @@ public class ClosetLeafFromGivenNode {
 		// If right subtree has x
 		if (r != -1) {
 			// Find closest leaf in left subtree
-			findLeafDown(root.left, r + 2, minDist);   //check coding simplified video for k distance
+			findLeafDown(root.left, r + 2);   //check coding simplified video for k distance
 			return r + 1;
 		}
 
@@ -75,16 +73,10 @@ public class ClosetLeafFromGivenNode {
 
 	// Returns minimum distance of a leaf from given node x
 	int minimumDistance(Node root, Node x) {
-		// Initialize result (minimum distance from a leaf)
-		Distance d = new Distance();
-
-		// Find closest leaf down to x
-		findLeafDown(x, 0, d);
-
 		// See if there is a closer leaf through parent
-		findThroughParent(root, x, d);
+		findThroughParent(root, x, minDist);
 
-		return d.minDis;
+		return minDist;
 	}
 
 	// Driver program

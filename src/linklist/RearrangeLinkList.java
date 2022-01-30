@@ -36,11 +36,11 @@ public class RearrangeLinkList {
 		node2 = reverselist(node2);
 
 		// 4) Merge alternate nodes
-		node = new Node(0); // Assign dummy Node
+		Node curr = new Node(); // Assign dummy Node
 
 		// curr is the pointer to this dummy Node, which will
 		// be used to form the new list
-		Node curr = node;
+		//Node curr = node;
 		while (node1 != null || node2 != null) {
 
 			// First add the element from first list
@@ -59,7 +59,7 @@ public class RearrangeLinkList {
 		}
 
 		// Assign the head of the new list to head pointer
-		node = node.next;
+		//node = node.next;
 	}
 
 	

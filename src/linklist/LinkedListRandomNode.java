@@ -10,5 +10,8 @@ public class LinkedListRandomNode {
 		next=random=null;
 	}
 	
+	LinkedListRandomNode(){
+		next=random=null;
+	}
 	
 }

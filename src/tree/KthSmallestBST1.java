@@ -66,7 +66,7 @@ public class KthSmallestBST1 {
 		for (int x : keys)
 			root = insert(root, x);
 
-		int k = 3;
+		int k = 4;
 		printKthSmallest(root, k);
 
 	}

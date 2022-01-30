@@ -31,7 +31,7 @@ public class PrintCousinSingleTraversal {
 		// the following loop runs until found is not true,or q is not empty. if found
 		// has become true => we have found the level in which the node is present and
 		// the present queue will contain all the cousins of that node
-		while (q.isEmpty() == false && found == false) {
+		while (!q.isEmpty()&& found == false) {
 
 			size = q.size();
 			while (size-- > 0) {

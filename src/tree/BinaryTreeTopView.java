@@ -1,7 +1,7 @@
 package tree;
 
 /**
- * 
+ * coding simplified
  * 
  */
 

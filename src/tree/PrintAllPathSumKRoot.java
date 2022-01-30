@@ -3,7 +3,8 @@ package tree;
 import java.util.ArrayList;
 
 /**
- * find path in the tree such that the sum of nodes in path is equal to given K from root
+ * find path in the tree such that the sum of nodes in path is equal to given K
+ * from root
  * 
  * @author nishantchauhan
  *

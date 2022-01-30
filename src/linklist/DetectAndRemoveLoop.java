@@ -23,8 +23,8 @@ public class DetectAndRemoveLoop {
 
 		// Move slow and fast 1 and 2 steps
 		// ahead respectively.
-		slow = slow.next;
-		fast = fast.next.next;
+		//slow = slow.next;
+		//fast = fast.next.next;
 
 		// Search for loop using slow and fast pointers
 		while (fast != null && fast.next != null) {

@@ -1,6 +1,6 @@
 package tree;
 /*
- * Given a sorted array find the number of BSTs you can form
+ * Given a sorted array convert in to BST 
  * O(n)
  */
 

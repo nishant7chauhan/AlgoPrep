@@ -45,7 +45,7 @@ public class MergeSortRandomPointer {
 
 		NodeRandom slow, fast;
 		slow = node;
-		fast = node.next;
+		fast = node.random;
 
 		while (fast != null && fast.random!= null) {
 			slow = slow.random;

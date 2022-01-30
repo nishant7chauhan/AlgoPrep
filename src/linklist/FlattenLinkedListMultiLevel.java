@@ -10,6 +10,17 @@ class NodeF {
 	NodeF right;
 	NodeF next;
 	int data;
+
+	NodeF(int key) {
+		data = key;
+		right = null;
+		next = null;
+	}
+
+	NodeF() {
+		right = null;
+		next = null;
+	}
 }
 
 /*
@@ -66,22 +77,11 @@ class Linked {
 	}
 
 	/*
-	 * getNewNodeF() method to generate a new NodeF
-	 */
-	public NodeF getNewNodeF(int key) {
-		NodeF a = new NodeF();
-		a.next = null;
-		a.right = null;
-		a.data = key;
-		return a;
-	}
-
-	/*
 	 * insert method is used to insert the element in Linked List
 	 */
 	public NodeF insert(NodeF NodeF, int key) {
 		if (NodeF == null)
-			return getNewNodeF(key);
+			return new NodeF(key);
 		NodeF.next = insert(NodeF.next, key);
 		return NodeF;
 	}

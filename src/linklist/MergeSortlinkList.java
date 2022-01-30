@@ -26,12 +26,9 @@ public class MergeSortlinkList {
 	 * It'll find the middle node of the linked list
 	 */
 	public Node middleNode(Node node) {
-		if (node == null) {
-			return null;
-		}
-
+		
 		Node a = node;
-		Node b = node.next;
+		Node b = node.next;  // always use fast pointer one ahead of slow at start( for  2 element)
 
 		while (b != null && b.next != null) {
 			a = a.next;

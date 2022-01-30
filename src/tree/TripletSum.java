@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Find triplet whose sum is given sum(same approach for sum = 0 )
+ * Find triplet whose sum is given sum in BST(same approach for sum = 0 )
  * @author IN006166
  * O(n2),O(n)
  */

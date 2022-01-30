@@ -78,7 +78,7 @@ public class PrintCousins {
 		root.right.right = new Node(7);
 		root.right.left.right = new Node(8);
 
-		printCousins(root, root.left.right);
+		printCousins(root, root.left.left);
 	}
 
 }

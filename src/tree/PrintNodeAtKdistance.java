@@ -23,16 +23,16 @@ public class PrintNodeAtKdistance {
 
 		if (node == targetNode) {
 			printNodesAtKDistanceFromParent(node, k);
-			return 0;
+			return 1;
 		}
 
 		int leftDist = printElementsAtKDistanceUtil(node.left, targetNode, k);
 
 		if (leftDist != -1) {
-			if (leftDist + 1 == k) {
+			if (leftDist == k) {
 				System.out.print(node.data + " ");
 			} else {
-				printNodesAtKDistanceFromParent(node.right, k - 2 - leftDist);
+				printNodesAtKDistanceFromParent(node.right, k - 1 - leftDist);
 			}
 
 			return leftDist + 1;
@@ -41,10 +41,10 @@ public class PrintNodeAtKdistance {
 		int rightDist = printElementsAtKDistanceUtil(node.right, targetNode, k);
 
 		if (rightDist != -1) {
-			if (rightDist + 1 == k) {
+			if (rightDist == k) {
 				System.out.print(node.data + " ");
 			} else {
-				printNodesAtKDistanceFromParent(node.left, k - 2 - rightDist);
+				printNodesAtKDistanceFromParent(node.left, k - 1 - rightDist);
 			}
 
 			return rightDist + 1;

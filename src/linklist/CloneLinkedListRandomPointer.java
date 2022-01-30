@@ -1,13 +1,14 @@
 package linklist;
 
 /**
- * Clone a linked list with Next and Random pointer.Given the solution using O(1) extra space (using hashmap). 2 (3+2).[done]
- * @author nishant.chauhan
- * O(n) and O(1)
+ * Clone a linked list with Next and Random pointer.Given the solution using
+ * O(1) extra space (using hashmap). 2 (3+2).[done]
+ * 
+ * @author nishant.chauhan O(n) and O(1)
  */
 
 public class CloneLinkedListRandomPointer {
-	
+
 	public static LinkedListRandomNode copyRandomList(LinkedListRandomNode head) {
 		LinkedListRandomNode curr = head;
 		LinkedListRandomNode next = null;
@@ -34,25 +35,22 @@ public class CloneLinkedListRandomPointer {
 		// Third pass: Our goal is to restore the original list, and extract the copy
 		// list.
 
-		curr = head;
-		LinkedListRandomNode dummyHead = new LinkedListRandomNode(0);
-		LinkedListRandomNode cloneListCurr = dummyHead;
-		LinkedListRandomNode copy = null;
-		while (curr != null) {
+		LinkedListRandomNode original = head;
 
-			next = curr.next.next;
-			// curr.next is curr's clone. Let's reference to it
-			copy = curr.next;
-			// Append the copy to the final list tail
-			cloneListCurr.next = copy;
-			cloneListCurr = copy;
-			// Restore curr (the original node's) next value
-			curr.next = next;
-			// Advance curr to the stashed next
-			curr = next;
+		LinkedListRandomNode copy = head.next;
+		LinkedListRandomNode tempHead = copy;
+		while (original != null) {
+
+			original.next = original.next.next;
+
+			copy.next = (copy.next != null) ? copy.next.next : copy.next;
+
+			original = original.next;
+			copy = copy.next;
+
 		}
 
-		return dummyHead.next;
+		return tempHead;
 	}
 
 	public static void printList(LinkedListRandomNode list) {
@@ -80,7 +78,7 @@ public class CloneLinkedListRandomPointer {
 		node.next.next.next.random = node.next;
 
 		printList(node);
-		
+
 		printList(copyRandomList(node));
 
 	}

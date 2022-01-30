@@ -3,7 +3,7 @@ package linklist;
 /**
  * Merge K sorted linked lists.Sort linked list(Used merge sort)
  * @author nishant.chauhan
- * (NlogK) , O(1)  // check complexity below
+ * (NKlogK) , O(1)  // check complexity below
  * No need to check K sorted array as this is divide and conquer linklist size is adjustable which is not in the case of array
  */
 
@@ -20,7 +20,7 @@ public class MergeKSortedLinkList {
 			int i = 0;
 			int j = last;
 
-			while (i < j) { //N times
+			while (i < j) { //K times
 				arr[i] = mergeTwoSortedLinkedList(arr[i], arr[j]);
 
 				i++;
@@ -54,7 +54,7 @@ public class MergeKSortedLinkList {
 	/*
 	 * Helper function to merge two sorted linked list
 	 */
-	public Node mergeTwoList(Node first, Node second) {
+	public Node mergeTwoList(Node first, Node second) {    //N times
 		if (first == null && second == null) {
 			return null;
 		}
@@ -115,10 +115,10 @@ public class MergeKSortedLinkList {
 		arr[3].next.next = new Node(16);
 		arr[3].next.next.next = new Node(18);
 
-		arr[4] = new Node(0);
+		arr[4] = new Node(13);
 		arr[4].next = new Node(19);
 		arr[4].next.next = new Node(20);
-		arr[4].next.next.next = new Node(31);
+		arr[4].next.next.next = new Node(21);
 
 		Node mergedList = a.mergeKSortedLists(arr, arr.length - 1);
 		a.printList(mergedList);

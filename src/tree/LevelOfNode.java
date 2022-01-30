@@ -16,11 +16,11 @@ public class LevelOfNode {
 		// TODO Auto-generated method stub
 
 		if (node == null)
-			return 0;
+			return -1;
 		if (node.data == x)
 			return level;
 		int result = printKdistance(node.left, x, level+1);
-		if (result != 0)
+		if (result != -1)
 			return result;
 		return printKdistance(node.right, x, level+1);
 		
