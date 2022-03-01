@@ -6,7 +6,7 @@ import java.util.Iterator;
 /**
  * 1.detect cycle in directed graph
  * 2.Find whether it is possible to finish all tasks or not from given dependencies.
- * 
+ * https://www.youtube.com/watch?v=0dJmTuMrUZM
  * 
  * @author nishantchauhan
  * 

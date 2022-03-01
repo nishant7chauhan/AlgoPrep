@@ -11,6 +11,7 @@ import java.util.Queue;
  * 
  * useful when need to schedule task in parallel as we check based on indegree 0
  * 
+ * https://www.youtube.com/watch?v=tggiFvaxjrY
  * 
  * @author nishantchauhan
  *
@@ -24,7 +25,7 @@ public class Kahns {
 	// An Array of List which contains
 	// references to the Adjacency List of
 	// each vertex
-	List<Integer> adj[];
+	ArrayList<Integer> adj[];
 
 	// Constructor
 	public Kahns(int V) {

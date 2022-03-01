@@ -8,8 +8,8 @@ import java.util.Queue;
 import java.util.Set;
 
 /**
- * 
- * 
+ * Given a sorted dictionary of an alien language, find order of characters
+ * https://www.youtube.com/watch?v=LA0X_N-dEsg
  * 
  * @author nishantchauhan
  *
@@ -52,7 +52,8 @@ public class AlienDictionary {
 						graph.get(out).add(in);
 						indegree[in - 'a']++;
 					}
-				}
+				} else
+					continue;
 				break;// do not need to check next character(check example)
 			}
 
@@ -71,12 +72,12 @@ public class AlienDictionary {
 		for (char c : graph.keySet()) {
 
 			if (indegree[c - 'a'] == 0) {
-				sb.append(c);
 				queue.offer(c);
 			}
 		}
 		while (!queue.isEmpty()) {
 			char cur = queue.poll();
+			sb.append(cur);
 
 			if (graph.get(cur) == null || graph.get(cur).size() == 0)
 				continue;
@@ -85,7 +86,7 @@ public class AlienDictionary {
 
 				if (--indegree[neigh - 'a'] == 0) {
 					queue.offer(neigh);
-					sb.append(neigh);
+
 				}
 
 			}

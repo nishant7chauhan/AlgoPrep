@@ -47,6 +47,7 @@ public class MergeOverlappingInterval {
 		 System.out.print("The Merged Intervals are: ");
 		
 		for(int i=0; i<=index; i++) {
+			
 			System.out.println(arr[i].start + "," + arr[i].end);
 		}
 		

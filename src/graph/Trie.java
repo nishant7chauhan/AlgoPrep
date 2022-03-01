@@ -121,7 +121,7 @@ public class Trie {
 	 * Returns true if parent should delete the mapping
 	 */
 	private boolean delete(TrieNode current, String word, int index) {
-		if (index == word.length()) {
+		if (index == word.length()) { 
 			// when end of word is reached only delete if currrent.endOfWord is true.
 			if (!current.endOfWord) {
 				return false;
