@@ -4,6 +4,7 @@ public class FindWordDFS {
 	
 	static int rowNum[] = {-1, -1, -1, 0, 0, 1, 1, 1}; 
 	static int colNum[] = {-1, 0, 1, -1, 1, -1, 0, 1};
+	static int count = 0; 
 	
 	static boolean isvalid(int row, int col, int prevRow, int prevCol) 
 	{ 
@@ -26,6 +27,7 @@ public class FindWordDFS {
 		
 		if(index == n) {
 			System.out.print(path + "\n");
+			count++;
 		}
 		
 		for (int k = 0; k < 8; ++k) {
@@ -48,6 +50,7 @@ public class FindWordDFS {
 				 }
 			 }
 		 }
+		 System.out.print("count: "+ count);
 	 }
 	
 	

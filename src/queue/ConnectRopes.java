@@ -1,4 +1,4 @@
-package sorting;
+package queue;
 import java.util.PriorityQueue;
 
 //Connect n ropes such that cost is minimized

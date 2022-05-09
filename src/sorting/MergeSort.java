@@ -1,24 +1,24 @@
 package sorting;
 
+import java.util.Arrays;
+
 public class MergeSort {
 	// Merges two subarrays of arr[].
 	// First subarray is arr[l..m]
 	// Second subarray is arr[m+1..r]
 	void merge(int arr[], int l, int m, int r) {
-		// Find sizes of two subarrays to be merged
-		int n1 = m - l + 1;
+        // Left subarray 
+        int[] L = Arrays.copyOfRange(arr, l, m + 1);  
+        int[] R = Arrays.copyOfRange(arr, m + 1, r + 1); 
+		
+		/*int n1 = m - l + 1;
 		int n2 = r - m;
-
-		/* Create temp arrays */
 		int L[] = new int[n1];
 		int R[] = new int[n2];
-
-		/* Copy data to temp arrays */
 		for (int i = 0; i < n1; ++i)
 			L[i] = arr[l + i];
 		for (int j = 0; j < n2; ++j)
-			R[j] = arr[m + 1 + j];
-
+			R[j] = arr[m + 1 + j];*/
 		/* Merge the temp arrays */
 
 		// Initial indexes of first and second subarrays
@@ -26,7 +26,7 @@ public class MergeSort {
 
 		// Initial index of merged subarry array
 		int k = l;
-		while (i < n1 && j < n2) {
+		while (i < L.length && j < R.length) {
 			if (L[i] <= R[j]) {
 				arr[k] = L[i];
 				i++;
@@ -38,14 +38,14 @@ public class MergeSort {
 		}
 
 		/* Copy remaining elements of L[] if any */
-		while (i < n1) {
+		while (i < L.length) {
 			arr[k] = L[i];
 			i++;
 			k++;
 		}
 
 		/* Copy remaining elements of R[] if any */
-		while (j < n2) {
+		while (j < R.length) {
 			arr[k] = R[j];
 			j++;
 			k++;
@@ -64,7 +64,7 @@ public class MergeSort {
 			Mergesort(arr, m + 1, r);
 
 			
-			System.out.print("l: "+l + " m: "+m + " r: "+r +"\n");
+			//System.out.print("l: "+l + " m: "+m + " r: "+r +"\n");
 			// Merge the sorted halves
 			merge(arr, l, m, r);
 		}

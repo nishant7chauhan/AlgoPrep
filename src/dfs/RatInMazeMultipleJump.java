@@ -37,7 +37,7 @@ public class RatInMazeMultipleJump {
 			return true;
 		}
 
-		if (isSafe(maze, i, j) == true) {
+		if (isSafe(maze, i, j)) {
 			sol[i][j] = 1;
 
 			if (solveMazeUtil(maze, i + maze[i][j], j, sol)) {

@@ -1,6 +1,7 @@
 package stack;
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Stack;
 
 /**
  * Maximum Rectangular Area in a Histogram.
@@ -13,15 +14,15 @@ import java.util.LinkedList;
 public class MaximumHistogram {
 
 	public int maxHistogram(int input[]) {
-		Deque<Integer> stack = new LinkedList<Integer>(); // dequeue is interface
+		Stack<Integer> stack = new Stack<Integer>(); 
 		int maxArea = 0;
 		int area = 0;
 		int i;
 		for (i = 0; i < input.length;) {
-			if (stack.isEmpty() || input[stack.peekFirst()] <= input[i]) {
-				stack.offerFirst(i++);
+			if (stack.isEmpty() || input[stack.peek()] <= input[i]) {
+				stack.push(i++);
 			} else {
-				int top = stack.pollFirst();
+				int top = stack.pop();
 				// if stack is empty means everything till i has to be
 				// greater or equal to input[top] so get area by
 				// input[top] * i;
@@ -32,7 +33,7 @@ public class MaximumHistogram {
 				// has to be greater or equal to input[top]
 				// so area = input[top]*(i - stack.peek() - 1);
 				else {
-					area = input[top] * (i - stack.peekFirst() - 1); // check video simple
+					area = input[top] * (i - stack.peek() - 1); // check video simple
 				}
 				if (area > maxArea) {
 					maxArea = area;
@@ -40,7 +41,7 @@ public class MaximumHistogram {
 			}
 		}
 		while (!stack.isEmpty()) {
-			int top = stack.pollFirst();
+			int top = stack.pop();
 			// if stack is empty means everything till i has to be
 			// greater or equal to input[top] so get area by
 			// input[top] * i;
@@ -51,7 +52,7 @@ public class MaximumHistogram {
 			// has to be greater or equal to input[top]
 			// so area = input[top]*(i - stack.peek() - 1);
 			else {
-				area = input[top] * (i - stack.peekFirst() - 1); // check video simple(previous valule excluding i i.e
+				area = input[top] * (i - stack.peek() - 1); // check video simple(previous valule excluding i i.e
 																	// (i-1 - top)
 			}
 			if (area > maxArea) {

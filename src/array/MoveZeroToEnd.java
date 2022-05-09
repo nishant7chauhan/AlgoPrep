@@ -6,7 +6,7 @@ public class MoveZeroToEnd {
 	static void moveZerosToEnd(int arr[], int n) {
 
 		// Count of non-zero elements
-		int count = 0;
+		int index = 0;
 		int temp;
 
 		// Traverse the array. If arr[i] is
@@ -15,10 +15,9 @@ public class MoveZeroToEnd {
 		// index 'i'
 		for (int i = 0; i < n; i++) {
 			if ((arr[i] != 0)) {
-				temp = arr[count];
-				arr[count] = arr[i];
+				temp = arr[index];
+				arr[index++] = arr[i];
 				arr[i] = temp;
-				count = count + 1;
 			}
 		}
 	}

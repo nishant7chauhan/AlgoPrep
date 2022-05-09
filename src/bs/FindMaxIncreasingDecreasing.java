@@ -1,4 +1,4 @@
-package array;
+package bs;
 
 public class FindMaxIncreasingDecreasing {
 

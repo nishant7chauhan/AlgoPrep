@@ -2,8 +2,8 @@ package linklist;
 
 /**
  *  Reverse every k element set of singly linked list. [done]
-	list: 1 2 3 4 5 6 7 8 9, k:3 — output: 7 8 9 4 5 6 1 2 3
-	list: a b c d e f g h i j k l, k : 4 — output: i j k l e f g h a b c d
+	list: 1 2 3 4 5 6 7 8 9, k:3 ï¿½ output: 7 8 9 4 5 6 1 2 3
+	list: a b c d e f g h i j k l, k : 4 ï¿½ output: i j k l e f g h a b c d
  *  @author nishantchauhan
  *  O(n)
  */

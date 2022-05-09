@@ -34,7 +34,7 @@ public class BinaryTreeTopView {
 
 		while (!q.isEmpty()) {
 			NodeH temp = q.remove();
-			int hd = temp.height;
+			int hd = temp.height;   // hd is 0 at root
 
 			if (m.get(hd) == null) {
 				m.put(hd, temp.data);

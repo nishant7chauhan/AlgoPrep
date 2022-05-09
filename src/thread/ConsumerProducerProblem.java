@@ -4,10 +4,11 @@ package thread;
 import java.util.LinkedList;
 
 public class ConsumerProducerProblem {
-
+	
 		public static void main(String[] args) {
 			// TODO Auto-generated method stub
 
+			
 	        // Object of a class that has both produce() 
 	        // and consume() methods 
 	        final PC pc = new PC(); 
@@ -56,6 +57,7 @@ public class ConsumerProducerProblem {
 	        // Create a list shared by producer and consumer 
 	        // Size of list is 2. 
 	        LinkedList<Integer> list = new LinkedList<>(); 
+	    	static int MAX_VALUE = 0;
 	        int capacity = 2; 
 	  
 	        // Function called by producer thread 

@@ -7,6 +7,8 @@ class NumberOfIsland {
 
 	// No of rows and columns
 	static final int ROW = 5, COL = 5;
+	int rowNbr[] = new int[] { -1, -1, -1, 0, 0, 1, 1, 1 };
+	int colNbr[] = new int[] { -1, 0, 1, -1, 1, -1, 0, 1 };
 
 	// A function to check if a given cell (row, col) can
 	// be included in DFS
@@ -20,9 +22,7 @@ class NumberOfIsland {
 	// It only considers the 8 neighbors as adjacent vertices
 	void DFS(int M[][], int row, int col, boolean visited[][]) {
 		// These arrays are used to get row and column numbers
-		// of 8 neighbors of a given cell
-		int rowNbr[] = new int[] { -1, -1, -1, 0, 0, 1, 1, 1 };
-		int colNbr[] = new int[] { -1, 0, 1, -1, 1, -1, 0, 1 };
+		// of 8 neighbors of a given cel
 
 		// Mark this cell as visited
 		visited[row][col] = true;

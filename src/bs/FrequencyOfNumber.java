@@ -1,4 +1,4 @@
-package array;
+package bs;
 
 /******* Count number of occurrences (or frequency) in a sorted array *******/
 //O(Logn)

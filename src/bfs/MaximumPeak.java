@@ -40,7 +40,7 @@ public class MaximumPeak {
 				for (int[] dir : dirs) {
 					int r = coord[0] + dir[0], c = coord[1] + dir[1];
 					if (withinGrid(m, n, r, c) && !visited[r][c]) {
-						q.offer(new int[] { r, c, heights[coord[0]][coord[1]] + 1 });
+						q.offer(new int[] { r, c, heights[r][c] + 1 });
 						visited[r][c] = true;
 						heights[r][c] = heights[coord[0]][coord[1]] + 1; // k+1; // Answer 1;
 					}

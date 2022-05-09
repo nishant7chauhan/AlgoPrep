@@ -1,4 +1,4 @@
-package array;
+package bs;
 //Find peak point in an array
 public class PeakElementInArray {
 	

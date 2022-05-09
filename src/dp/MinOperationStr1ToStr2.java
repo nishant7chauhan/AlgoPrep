@@ -1,13 +1,13 @@
 package dp;
 
 /**
- * Find minimum number of edits (operations) required to convert ‘str1’ into ‘str2’.Insert,Remove,Replace
+ * Find minimum number of edits (operations) required to convert ï¿½str1ï¿½ into ï¿½str2ï¿½.Insert,Remove,Replace  //tushar roy
  * @author nishantchauhan
  * O(m*n) and size O(m*n) //replace 2*str1 to have space complexity O(m)
  */
 
 
-public class EditDistance {
+public class MinOperationStr1ToStr2 {
 
 	
 	static int min(int x, int y, int z) 

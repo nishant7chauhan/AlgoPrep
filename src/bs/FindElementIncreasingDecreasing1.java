@@ -1,4 +1,4 @@
-package array;
+package bs;
 
 /**
  * Find an element in first increasing and decreasing array

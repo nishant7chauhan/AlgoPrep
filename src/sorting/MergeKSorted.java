@@ -56,7 +56,7 @@ class MergeKSorted
         if (smallest != i) 
         { 
             swap(harr, i, smallest); 
-            MinHeapify(smallest); 
+            //MinHeapify(smallest); //because size is k(3 or 2 element)
         } 
     } 
   

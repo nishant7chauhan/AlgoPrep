@@ -79,7 +79,7 @@ public class AlienDictionary {
 			char cur = queue.poll();
 			sb.append(cur);
 
-			if (graph.get(cur) == null || graph.get(cur).size() == 0)
+			if (graph.get(cur) == null || graph.get(cur).size() == 0) //for seperate graph like single node
 				continue;
 
 			for (char neigh : graph.get(cur)) {

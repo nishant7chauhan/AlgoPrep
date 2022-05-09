@@ -1,3 +1,4 @@
+package string;
 //Convert integer to words(e.g 1234 to words) 
 	class IntegerToWords
 	{

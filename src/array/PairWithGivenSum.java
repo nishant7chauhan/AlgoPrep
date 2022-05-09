@@ -1,6 +1,6 @@
 package array;
 
-import java.util.HashSet;
+import java.util.HashMap;
 
 /**
  * Find pair with given sum
@@ -15,18 +15,18 @@ public class PairWithGivenSum {
 	
 	static void printpairs(int arr[], int sum) 
     { 
-        HashSet<Integer> s = new HashSet<Integer>(); 
+        HashMap<Integer,Integer> s = new HashMap<Integer,Integer>(); 
         for (int i = 0; i < arr.length; ++i) { 
             int temp = sum - arr[i]; 
   
             // checking for condition 
-            if (s.contains(temp)) { 
+            if (s.containsKey(temp)) { 
                 System.out.println( 
                     "Pair with given sum "
                     + sum + " is (" + arr[i] 
-                    + ", " + temp + ")"); 
+                    + ", " + temp + ")" + "\n" + "and index are: "+ s.get(temp) + "," + i ); 
             } 
-            s.add(arr[i]); 
+            s.put(arr[i],i); 
         } 
     } 
   

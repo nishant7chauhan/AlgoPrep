@@ -1,4 +1,4 @@
-package array;
+package bs;
 
 /*******
  * Search an element in a sorted rotated array in a single pass./ Find pivot in
