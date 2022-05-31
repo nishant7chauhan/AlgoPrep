@@ -2,13 +2,14 @@ package linklist;
 
 /**
  * Merge K sorted linked lists.Sort linked list(Used merge sort)
- * @author nishant.chauhan
- * (NKlogK) , O(1)  // check complexity below
- * No need to check K sorted array as this is divide and conquer linklist size is adjustable which is not in the case of array
+ * 
+ * @author nishant.chauhan (NKlogK) , O(1) // check complexity below No need to
+ *         check K sorted array as this is divide and conquer linklist size is
+ *         adjustable which is not in the case of array
+ * 
+ *         After the first cycle, K/2 lists are left each of size 2*N. After the
+ *         second cycle, K/4 lists are left each of size 4*N and so on.
  */
-
-
-
 
 public class MergeKSortedLinkList {
 
@@ -16,17 +17,17 @@ public class MergeKSortedLinkList {
 	 * It merges the k sorted linked lists
 	 */
 	public Node mergeKSortedLists(Node[] arr, int last) {
-		while (last != 0) { //log(k) times
+		while (last != 0) { // log(k) times
 			int i = 0;
 			int j = last;
 
-			while (i < j) { //K times
+			while (i < j) { // K/2 times
 				arr[i] = mergeTwoSortedLinkedList(arr[i], arr[j]);
 
 				i++;
 				j--;
 
-				if (i >= j) { // middle element  https://www.youtube.com/watch?v=65KAkew7yHU
+				if (i >= j) { // middle element https://www.youtube.com/watch?v=65KAkew7yHU
 					last = j;
 					break;
 				}
@@ -54,7 +55,7 @@ public class MergeKSortedLinkList {
 	/*
 	 * Helper function to merge two sorted linked list
 	 */
-	public Node mergeTwoList(Node first, Node second) {    //N times
+	public Node mergeTwoList(Node first, Node second) { // N times
 		if (first == null && second == null) {
 			return null;
 		}

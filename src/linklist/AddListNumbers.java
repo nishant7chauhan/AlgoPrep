@@ -102,14 +102,14 @@ public class AddListNumbers {
 		AddListNumbers l1 = new AddListNumbers();
 		l1.insert(3);
 		l1.insert(6);
-		l1.insert(5);
+		l1.insert(5); // 563
 		AddListNumbers l2 = new AddListNumbers();
 		l2.insert(2);
 		l2.insert(4);
-		l2.insert(8);
+		l2.insert(8); // 842
 		AddListNumbers l3 = new AddListNumbers();
 		Node head = sum(l1.head, l2.head);
-		l3.traverse(head);
+		l3.traverse(head); // 1405
 		System.out.print("Null");
 	}
 }

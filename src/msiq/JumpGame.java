@@ -8,6 +8,7 @@ package msiq;
  * Return true if you can reach the last index, or false otherwise.
  * 
  * @author nishantchauhan
+ * O(n)
  *
  */
 
@@ -15,7 +16,7 @@ package msiq;
 
 public class JumpGame {
 
-	public boolean canJump(int[] nums) {
+	public static boolean canJump(int[] nums) {
 		int lastGoodIndex = nums.length - 1;
 
 		for (int i = nums.length - 1; i >= 0; i--) {
@@ -27,4 +28,12 @@ public class JumpGame {
 		return lastGoodIndex == 0;
 	}
 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] arr = { 3, 2, 1, 0, 4 };
+
+		System.out.print(canJump(arr));
+
+	}
 }

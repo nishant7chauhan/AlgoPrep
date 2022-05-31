@@ -38,9 +38,9 @@ public class QuickSortRandomPartitionAlgo {
 				partitionIndex++;
 			}
 		}
-		int tempPivot = arr[end];
+	
 		arr[end] = arr[partitionIndex];
-		arr[partitionIndex] = tempPivot;
+		arr[partitionIndex] = pivot;
 
 		return partitionIndex;
 	}

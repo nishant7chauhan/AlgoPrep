@@ -59,7 +59,8 @@ public class RearrangeLinkList {
 		}
 
 		// Assign the head of the new list to head pointer
-		//node = node.next;
+		//node = node.next;  
+		//  as node is still pointing to 1
 	}
 
 	
@@ -92,7 +93,7 @@ public class RearrangeLinkList {
 		head.next.next.next.next = new Node(5);
 
 		list.printlist(head); // print original list
-		list.rearrange(head); // rearrange list as per ques
+		list.rearrange(head); // rearrange list as per ques   //as node is still pointing to 1
 		System.out.println("");
 		list.printlist(head); // print modified list
 

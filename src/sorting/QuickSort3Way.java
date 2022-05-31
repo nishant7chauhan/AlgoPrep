@@ -6,7 +6,7 @@ package sorting;
  * @author nishantchauhan
  *
  *
- *         Not stable O(lg(n)) extra space O(n2) time, but typically O(n·lg(n))
+ *         Not stable O(lg(n)) extra space O(n2) time, but typically O(nï¿½lg(n))
  *         time Adaptive: O(n) time when O(1) unique keys
  */
 

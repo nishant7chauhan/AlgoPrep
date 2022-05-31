@@ -35,7 +35,7 @@ public class GreaterNumber {
 				// Now see which of the two
 				// formed numbers
 				// is greater
-				return XY.compareTo(YX) > 0 ? -1 : 1;
+				return XY.compareTo(YX) > 0 ? -1 : 1; //if -ve then word1 comes before word2... if +ve word1 comes after word2
 			}
 		});
 

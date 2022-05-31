@@ -42,7 +42,7 @@ public class SortedArrayToBST {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SortedArrayToBST tree = new SortedArrayToBST(); 
-        int arr[] = new int[]{1, 2, 3, 4, 5, 6, 7}; 
+        int arr[] = new int[]{1, 2, 3, 4, 5}; 
         int n = arr.length; 
         root = tree.sortedArrayToBST(arr, 0, n - 1); 
         System.out.println("Preorder traversal of constructed BST"); 

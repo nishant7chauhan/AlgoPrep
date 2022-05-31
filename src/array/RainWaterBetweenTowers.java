@@ -2,7 +2,8 @@ package array;
 /* 21. Trapping rain water */
 
 /**
- *  Trapping rain water
+ * Trapping rain water
+ * 
  * @author nishantchauhan
  *
  *         Time Complexity: O(n). Only one traversal of the array is needed.
@@ -49,7 +50,7 @@ public class RainWaterBetweenTowers {
 	}
 
 	public static void main(String[] args) {
-		int[] towerHeight = { 1, 5, 2, 3, 1, 7, 2, 4 };
+		int[] towerHeight = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
 		System.out.println("Maximum water that " + "can be accumulated is "
 				+ getMaxRainwaterBetweenTowers(towerHeight, towerHeight.length));
 	}

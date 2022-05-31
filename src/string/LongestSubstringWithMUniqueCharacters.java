@@ -9,7 +9,7 @@ import java.util.Map;
  * 
  * @author nishant.chauhan
  * 
- *  Time Complexity: Considering function “isValid()” takes constant time, time complexity of above solution is O(n).
+ *  Time Complexity: Considering function ï¿½isValid()ï¿½ takes constant time, time complexity of above solution is O(n).
  */
 
 public class LongestSubstringWithMUniqueCharacters {

@@ -5,9 +5,18 @@ import java.util.ArrayList;
 /**
  * find path in the tree such that the sum of nodes in path is equal to given K
  * from root
- * 
+ *  
  * @author nishantchauhan
  *
+ */
+
+/**
+ * public boolean hasPathSum(TreeNode root, int sum) {
+ *  if (root == null) return false; 
+ *  if (root.val == sum && (root.left == null && root.right == null))
+ * return true; 
+ * return hasPathSum(root.left, sum - root.val) ||
+ * hasPathSum(root.right, sum - root.val); }
  */
 
 public class PrintAllPathSumKRoot {

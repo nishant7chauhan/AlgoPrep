@@ -9,6 +9,18 @@ package array;
 
 // similar approach for subarray with given sum(use left index and right index) https://www.youtube.com/watch?v=Ofl4KgFhLsM
 
+/*
+public int maxSubArray(int[] A) {
+    int newsum=A[0];
+    int max=A[0];
+    for(int i=1;i<A.length;i++){
+       newsum=Math.max(newsum+A[i],A[i]);           //check this solution ,for negative case check negative return value.
+       max= Math.max(max, newsum);
+    }
+return max; }
+*/
+
+
 public class Kadane {
 
 	public static void main(String[] args) {
